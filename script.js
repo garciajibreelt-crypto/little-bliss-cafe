@@ -3,7 +3,7 @@ const $$ = (s) => [...document.querySelectorAll(s)];
 const money = (n) => '₱' + Number(n || 0).toLocaleString('en-PH');
 const STORE = { users: 'littleBlissUsers', orders: 'littleBlissOrders', products: 'littleBlissProducts', cart: 'littleBlissCart', session: 'littleBlissSession' };
 
-// Menu items and prices are transcribed from the supplied Little Bliss menu.
+
 const starterProducts = [
   ['Snacks','Solo Cheese Burger',80],['Snacks','Flavored Fries',100],['Snacks','Burger and Fries',120],['Snacks','Chick N Fries',150],['Snacks','Nachos',170],
   ['Pasta','Alfredo',170],['Pasta','Spicy Peanut Noodles',180],['Pasta','Stir Fry Chicken Udon',195],['Pasta','Shrimp Aglio Olio',220],
@@ -114,7 +114,7 @@ $('#openLogin').onclick=()=>{if(currentUser){openAccount();return}setLoginMode('
 $$('[data-mode]').forEach(b=>b.onclick=()=>setLoginMode(b.dataset.mode));
 $('#loginForm').onsubmit=e=>{e.preventDefault();const fd=new FormData(e.currentTarget);const email=String(fd.get('email')).trim().toLowerCase();const password=String(fd.get('password'));
   if(loginMode==='admin'){
-    // Front-end demo credentials only. Never use this as real website security.
+    
     if(email==='admin@littlebliss.local'&&password==='LittleBlissAdmin123'){currentUser={name:'Administrator',email,role:'admin'};sessionStorage.setItem(STORE.session,JSON.stringify(currentUser));closeOverlay('loginOverlay');updateHeader();openAccount()}else $('#loginMessage').textContent='Incorrect administrator email or password.';
   }else if(loginMode==='register'){
     const name=String(fd.get('name')).trim();const users=getUsers();if(users.some(u=>u.email===email)){$('#loginMessage').textContent='An account with this email already exists.';return}users.push({name,email,password});localStorage.setItem(STORE.users,JSON.stringify(users));currentUser={name,email,role:'customer'};sessionStorage.setItem(STORE.session,JSON.stringify(currentUser));closeOverlay('loginOverlay');e.currentTarget.reset();updateHeader();toast('Account created. Welcome!');
