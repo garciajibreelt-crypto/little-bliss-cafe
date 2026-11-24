@@ -112,18 +112,58 @@
       </div>
     </section>
 
+    <section class="faq-section section" id="faqs">
+      <div class="section-heading">
+        <div><span class="eyebrow">GOOD TO KNOW</span><h2>Frequently asked <em>questions.</em></h2></div>
+        <p>Quick answers before your visit or order.</p>
+      </div>
+      <div class="faq-list">
+        <details><summary>Where is Little Bliss located?</summary><p>Little Bliss is in Bato, Catanduanes. Use the map below for directions and confirm the exact pin before travelling.</p></details>
+        <details><summary>What are your opening hours?</summary><p>Monday to Friday: 9 AM–9 PM. Saturday to Sunday: 1 PM–11 PM.</p></details>
+        <details><summary>Can I order a customized cake?</summary><p>Yes! Send an inquiry with your preferred design, size, date, and other details so the shop can discuss availability and pricing with you.</p></details>
+        <details><summary>Do you accept pickup or delivery?</summary><p>Ask the shop about current pickup and delivery availability for your location when placing your order.</p></details>
+        <details><summary>How can I ask about an order?</summary><p>Use the inquiry form below and choose email or Messenger. Include your order details so the team can assist you.</p></details>
+      </div>
+    </section>
+
     <section class="contact-section" id="contact">
-      <div><span class="eyebrow">COME SAY HELLO</span>
+      <div class="contact-main">
+        <span class="eyebrow">COME SAY HELLO</span>
         <h2>We’ll save you<br><em>a little sweetness.</em></h2>
         <p>Visit Little Bliss in Bato, Catanduanes, or send a message for questions and orders.</p>
         <div class="contact-links"><a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook ·
             Little Bliss ↗</a><a href="https://www.instagram.com/littleblisscakesandcoffee/" target="_blank"
             rel="noreferrer">Instagram · @littleblisscakesandcoffee ↗</a></div>
+        <div class="map-card">
+          <div class="map-heading"><div><span class="eyebrow">FIND THE CAFÉ</span><h3>Our location</h3></div><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Little+Bliss+Cakes+and+Pastry+Shop+Bato+Catanduanes" target="_blank" rel="noreferrer">Open in Google Maps ↗</a></div>
+          <iframe title="Map showing Little Bliss in Bato, Catanduanes" src="https://www.google.com/maps?q=Little%20Bliss%20Cakes%20and%20Pastry%20Shop%2C%20Bato%2C%20Catanduanes&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <small>Map search pin — please verify the exact shop location in Google Maps.</small>
+        </div>
       </div>
-      <div class="hours-card"><span class="script">Come by anytime</span>
-        <h3>Opening hours</h3>
-        <div><span>Monday – Friday</span><b>9 AM – 9 PM</b></div>
-        <div><span>Saturday – Sunday</span><b>1 PM – 11 PM</b></div><small>As listed on the provided menu.</small>
+      <div class="contact-side">
+        <div class="hours-card"><span class="script">Come by anytime</span>
+          <h3>Opening hours</h3>
+          <div><span>Monday – Friday</span><b>9 AM – 9 PM</b></div>
+          <div><span>Saturday – Sunday</span><b>1 PM – 11 PM</b></div><small>As listed on the provided menu.</small>
+        </div>
+        <div class="inquiry-card">
+          <span class="eyebrow">LET’S TALK</span><h3>Send an inquiry</h3>
+          <p>Have a question or a cake request? Tell us a little about it.</p>
+          <form id="inquiryForm" class="inquiry-form">
+            <label class="form-field">Your name<input name="name" required placeholder="Full name"></label>
+            <label class="form-field">Email address<input name="email" type="email" required placeholder="you@example.com"></label>
+            <label class="form-field">What is this about?
+              <select name="topic"><option>General inquiry</option><option>Customized cake</option><option>Menu question</option><option>Order follow-up</option><option>Pickup or delivery</option></select>
+            </label>
+            <label class="form-field">Your message<textarea name="message" rows="4" required placeholder="Write your question or order details..."></textarea></label>
+            <label class="form-field">Send through
+              <select name="channel" id="inquiryChannel"><option value="email">Email</option><option value="messenger">Messenger</option></select>
+            </label>
+            <button class="button full-button" type="submit">Send inquiry ↗</button>
+            <p class="form-message" id="inquiryMessage" aria-live="polite"></p>
+          </form>
+          <small class="demo-note">Email opens a draft in your email app. Messenger opens a chat with the page link configured in script.js. Nothing is sent automatically.</small>
+        </div>
       </div>
     </section>
   </main>
