@@ -690,7 +690,7 @@ $("#inquiryForm")?.addEventListener("submit", (e) => {
   if (channel === "messenger") {
     if (MESSENGER_PAGE.includes("your-page-username")) {
       $("#inquiryMessage").textContent =
-        "Please add the real Facebook Page username in script.js before using Messenger.";
+        "Error.";
       return;
     }
     window.open(MESSENGER_PAGE, "_blank", "noopener,noreferrer");
@@ -700,7 +700,7 @@ $("#inquiryForm")?.addEventListener("submit", (e) => {
   } else {
     if (CONTACT_EMAIL.includes("put-your-email-here")) {
       $("#inquiryMessage").textContent =
-        "Please add the shop email address in script.js before sending an email inquiry.";
+        "Error.";
       return;
     }
     const subject = encodeURIComponent(`Little Bliss inquiry: ${topic}`);
