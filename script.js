@@ -675,9 +675,9 @@ renderMenu();
 renderCartCount();
 updateHeader();
 
-// Contact form settings: replace these placeholders with the shop's real contact details.
-const CONTACT_EMAIL = "put-your-email-here@example.com";
-const MESSENGER_PAGE = "https://m.me/your-page-username";
+
+const CONTACT_EMAIL = "trillesnicole8@gmail.com";
+const MESSENGER_PAGE = "https://m.me/Littlebliss2021";
 $("#inquiryForm")?.addEventListener("submit", (e) => {
   e.preventDefault();
   const fd = new FormData(e.currentTarget);
